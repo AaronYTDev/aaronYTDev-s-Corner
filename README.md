@@ -1,4 +1,4 @@
 # aaronYTDev's Corner
 
-A plaster of no BS services hosted by aaronYTDev.
+Welcome to my corner of the internet. Find it here:
 https://merry-florentine-f250be.netlify.app/
