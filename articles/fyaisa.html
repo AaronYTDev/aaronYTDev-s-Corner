@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FYAISA · aaronYTDev's Articles</title>
+    <meta
+      name="description"
+      content="FYAISA — the one-stop homebrew shop for Vega OS (Fire TV) devices."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%236ea8fe'/%3E%3Ctext x='50' y='71' font-family='Arial,sans-serif' font-size='64' font-weight='700' text-anchor='middle' fill='%23081020'%3Ea%3C/text%3E%3C/svg%3E"
+    />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t !== "light" && t !== "dark") {
+            t = window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark";
+          }
+          document.documentElement.dataset.theme = t;
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="reading-progress" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="../index.html">
+          <span class="brand__mark" aria-hidden="true">a</span>
+          <span>aaronYTDev's Corner</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+        <nav class="nav" id="site-nav" aria-label="Primary">
+          <a class="nav__link" href="../index.html">Home</a>
+          <a class="nav__link" href="index.html">Articles</a>
+          <a class="nav__link" href="../TPOAF.html">Files</a>
+          <a class="nav__link" href="../example.html">Example</a>
+          <a
+            class="nav__link nav__link--external"
+            href="https://github.com/AaronYTDev"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+          <button class="theme-toggle" type="button" aria-label="Switch theme">
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+              />
+            </svg>
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container container--narrow">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="index.html">Articles</a>
+        <span aria-hidden="true">/</span>
+        <span>FYAISA</span>
+      </nav>
+
+      <article class="panel">
+        <header>
+          <h1>
+            FYAISA — the one-stop homebrew shop for Vega OS (Fire TV) devices
+          </h1>
+          <p class="article-meta">
+            Last edited <strong>October 11th, 2026</strong>
+          </p>
+          <p class="article-meta">
+            Wrote by <strong>aaronYTDev</strong>, edited &amp; maintained by
+            <strong>aaronYTDev</strong>
+          </p>
+        </header>
+        <div class="prose">
+          <p>
+            Say hello to
+            <a
+              href="https://github.com/AaronYTDev/FYAISA"
+              target="_blank"
+              rel="noopener"
+              >FYAISA</a
+            >
+            — pronounced "Fie-eye-sha," and it stands for "F**k You Amazon, I'm
+            Sideloading Anyways." Yeah, it's that kind of project. It's the
+            one-stop homebrew shop for Vega OS devices, and I built it with
+            <strong>Madrinth</strong>.
+          </p>
+          <p>
+            Here's the problem. Amazon blocks APK sideloading on the newer
+            sticks (Fire TV Stick 4K Select, Fire TV Stick HD, Fire TV Stick
+            4K) and offers no app store for sideloaded code. But Vega OS does
+            have a real SDK and an official Developer Mode, so we just used
+            that. Instead of fighting the launcher, FYAISA speaks the platform's
+            own language: a catalog of Vega homebrew you can build and install
+            on your own Fire TV.
+          </p>
+          <p>
+            It comes in two pieces. On your computer there's the
+            <code>fyaisa</code> CLI — list, search, info, install, update,
+            uninstall, devices, connect and approve. On your TV there's the
+            FYAISA app, an on-device catalog browser with search and details.
+            Everything they have in common lives in one <code>catalog.json</code>
+            that every app registers itself in.
+          </p>
+          <p>
+            The tricky part: a Vega OS app can't install other packages for you.
+            Package management is host-side only, and there's no third-party
+            install API. So the builds happen on your machine — your PC fetches
+            the source, builds it with the Vega SDK, and runs
+            <code>vega device install-app</code>. That would normally mean
+            getting off the couch every time, which is no fun. So
+            <code>fyaisa connect</code> runs a small bridge on your LAN: the TV
+            app pairs with a 6-digit code, and suddenly every app's detail
+            screen grows an <strong>Install</strong> button. Browse on the
+            couch, install with the remote. Pairing sticks across reboots, so
+            you only do it once per PC.
+          </p>
+          <p>
+            There's even a <strong>Power tools</strong> panel for poking at the
+            stick: launch hidden system apps the launcher won't show, see and
+            stop running apps, run allowlisted <code>vega device run-cmd</code>
+            commands from a D-pad terminal, read device info, and reboot the TV.
+            It all goes through the same allowlisted, token-authenticated bridge
+            — which binds to localhost unless you pass <code>--lan</code>, and
+            won't accept a single request until you approve that pairing code.
+          </p>
+          <p>
+            And there's already an app lineup: <strong>VegaTube</strong>
+            (ad-free YouTube, the reference app), <strong>ElevSH Files</strong>
+            (a D-pad file browser), <strong>Google Snake</strong>,
+            <strong>DOOM</strong> shareware compiled to WebAssembly, and
+            <strong>Super Mario Bros</strong> via a NES emulator. Adding your
+            own is the point — copy the reference app, tweak the manifest,
+            register it in the catalog, and open a PR.
+          </p>
+          <p>
+            That's FYAISA. It's the new latest project on the front page, so go
+            grab it if you've got a locked-down Fire TV and a bit of stubbornness.
+            It's not affiliated with Amazon or Google — it just uses Amazon's
+            own developer tools. Have fun, and stay off the couch.
+          </p>
+        </div>
+      </article>
+
+      <div class="actions">
+        <a class="btn" href="index.html">← All articles</a>
+        <a
+          class="btn btn--primary"
+          href="https://github.com/AaronYTDev/FYAISA"
+          target="_blank"
+          rel="noopener"
+          >View project ↗</a
+        >
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <span
+          >© <span data-year>2026</span> aaronYTDev · Built with plain HTML,
+          CSS &amp; JS.</span
+        >
+        <nav class="footer-links" aria-label="Footer">
+          <a href="../index.html">Home</a>
+          <a href="index.html">Articles</a>
+          <a
+            href="https://github.com/AaronYTDev/aaronYTDev-s-Corner"
+            target="_blank"
+            rel="noopener"
+            >Source ↗</a
+          >
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
