@@ -587,7 +587,34 @@ main {
 .footer-links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
+}
+
+/* "Destroy this page" — a deliberately dangerous-looking footer action */
+.site-footer .destroy-page {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.38rem 0.8rem;
+  border: 1px solid color-mix(in srgb, var(--danger) 45%, var(--border));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--danger) 10%, transparent);
+  color: var(--danger);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  transition: background-color 0.18s ease, border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.site-footer .destroy-page:hover {
+  color: var(--danger);
+  text-decoration: none;
+  background: color-mix(in srgb, var(--danger) 20%, transparent);
+  border-color: var(--danger);
+  transform: translateY(-1px);
 }
 
 /* --- Reading progress (article pages) ----------------------------------- */

@@ -148,4 +148,14 @@
     var scope = counter.closest("main") || document;
     counter.textContent = String(scope.querySelectorAll(".card").length);
   }
+
+  /* --- "Destroy this page" buttons --------------------------------------- */
+  // Point every destroy button at Sprite Fusion's sandbox with this exact
+  // page's URL, so it works no matter what domain the site is served from.
+  var destroyLinks = document.querySelectorAll(".destroy-page");
+  var destroyBase = "https://destroy.spritefusion.com/?url=";
+  for (var d = 0; d < destroyLinks.length; d++) {
+    destroyLinks[d].href =
+      destroyBase + encodeURIComponent(window.location.href);
+  }
 })();
