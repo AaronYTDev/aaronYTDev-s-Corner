@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>FYAISA · aaronYTDev's Articles</title>
-    <meta
-      name="description"
-      content="FYAISA — the one-stop homebrew shop for Vega OS (Fire TV) devices."
-    />
+    <title>FYAISA: getting around Amazon's sideloading block · aaronYTDev's corner</title>
+    <meta name="description" content="Amazon blocked sideloading on newer Fire TV Sticks, so we used their own developer tools to get around it." />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%236ea8fe'/%3E%3Ctext x='50' y='71' font-family='Arial,sans-serif' font-size='64' font-weight='700' text-anchor='middle' fill='%23081020'%3Ea%3C/text%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23faf8f3'/%3E%3Crect x='4.5' y='4.5' width='55' height='55' fill='none' stroke='%23a8431f' stroke-width='3'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' text-anchor='middle' fill='%231c1916'%3Ea%3C/text%3E%3C/svg%3E"
     />
     <script>
       (function () {
@@ -36,7 +33,7 @@
       <div class="container site-header__inner">
         <a class="brand" href="../index.html">
           <span class="brand__mark" aria-hidden="true">a</span>
-          <span>aaronYTDev's Corner</span>
+          <span>aaronYTDev's corner</span>
         </a>
         <button
           class="nav-toggle"
@@ -44,20 +41,18 @@
           aria-expanded="false"
           aria-controls="site-nav"
           aria-label="Toggle navigation"
-        >
-          ☰
-        </button>
+        ></button>
         <nav class="nav" id="site-nav" aria-label="Primary">
-          <a class="nav__link" href="../index.html">Home</a>
-          <a class="nav__link" href="index.html">Articles</a>
-          <a class="nav__link" href="../TPOAF.html">Files</a>
-          <a class="nav__link" href="../example.html">Example</a>
+          <a class="nav__link" href="../index.html">home</a>
+          <a class="nav__link" href="index.html">writing</a>
+          <a class="nav__link" href="../TPOAF.html">files</a>
+          <a class="nav__link" href="../example.html">example</a>
           <a
             class="nav__link nav__link--external"
             href="https://github.com/AaronYTDev"
             target="_blank"
             rel="noopener"
-            >GitHub</a
+            >github</a
           >
           <button class="theme-toggle" type="button" aria-label="Switch theme">
             <svg
@@ -93,123 +88,118 @@
 
     <main id="main" class="container container--narrow">
       <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <a href="../index.html">Home</a>
+        <a href="../index.html">home</a>
         <span aria-hidden="true">/</span>
-        <a href="index.html">Articles</a>
+        <a href="index.html">writing</a>
         <span aria-hidden="true">/</span>
         <span>FYAISA</span>
       </nav>
 
-      <article class="panel">
+      <article class="article">
         <header>
-          <h1>
-            FYAISA — the one-stop homebrew shop for Vega OS (Fire TV) devices
-          </h1>
+          <h1>FYAISA: getting around Amazon's sideloading block</h1>
           <p class="article-meta">
             Last edited <strong>October 11th, 2026</strong>
           </p>
           <p class="article-meta">
-            Wrote by <strong>aaronYTDev</strong>, edited &amp; maintained by
-            <strong>aaronYTDev</strong>
+            Written by <strong>aaronYTDev</strong>
           </p>
         </header>
         <div class="prose">
           <p>
-            Say hello to
             <a
               href="https://github.com/AaronYTDev/FYAISA"
               target="_blank"
               rel="noopener"
               >FYAISA</a
             >
-            — pronounced "Fie-eye-sha," and it stands for "F**k You Amazon, I'm
-            Sideloading Anyways." Yeah, it's that kind of project. It's the
-            one-stop homebrew shop for Vega OS devices, and I built it with
-            <strong>Madrinth</strong>.
+            (pronounced "Fie-eye-sha") stands for "F**k You Amazon, I'm
+            Sideloading Anyways." I built it with <strong>Madrinth</strong>.
+            It's a homebrew shop for Vega OS devices, which is a polite way of
+            saying it gets apps onto Fire TV Sticks that Amazon would rather you
+            didn't touch.
           </p>
           <p>
-            Here's the problem. Amazon blocks APK sideloading on the newer
-            sticks (Fire TV Stick 4K Select, Fire TV Stick HD, Fire TV Stick
-            4K) and offers no app store for sideloaded code. But Vega OS does
-            have a real SDK and an official Developer Mode, so we just used
-            that. Instead of fighting the launcher, FYAISA speaks the platform's
-            own language: a catalog of Vega homebrew you can build and install
-            on your own Fire TV.
+            On the newer Fire TV Stick 4K Select, Fire TV Stick HD, and Fire TV
+            Stick 4K, Amazon blocks APK sideloading. There's no app store for
+            code you compile yourself either. Vega OS does have a real SDK and
+            an official Developer Mode, so we used those instead of fighting the
+            launcher. FYAISA is a catalog of Vega homebrew that you build and
+            install on your own TV.
           </p>
           <p>
-            It comes in two pieces. On your computer there's the
-            <code>fyaisa</code> CLI — list, search, info, install, update,
-            uninstall, devices, connect and approve. On your TV there's the
-            FYAISA app, an on-device catalog browser with search and details.
-            Everything they have in common lives in one <code>catalog.json</code>
-            that every app registers itself in.
+            There are two parts. The <code>fyaisa</code> CLI runs on your
+            computer: list, search, info, install, update, uninstall, devices,
+            connect, approve. The FYAISA app runs on the TV as a catalog browser
+            with search and details. They share one <code>catalog.json</code>,
+            and every app in the lineup registers itself there.
           </p>
           <p>
-            The tricky part: a Vega OS app can't install other packages for you.
-            Package management is host-side only, and there's no third-party
-            install API. So the builds happen on your machine — your PC fetches
-            the source, builds it with the Vega SDK, and runs
-            <code>vega device install-app</code>. That would normally mean
-            getting off the couch every time, which is no fun. So
-            <code>fyaisa connect</code> runs a small bridge on your LAN: the TV
-            app pairs with a 6-digit code, and suddenly every app's detail
-            screen grows an <strong>Install</strong> button. Browse on the
-            couch, install with the remote. Pairing sticks across reboots, so
-            you only do it once per PC.
+            Vega OS doesn't let an app install other packages for you. Package
+            management is host-side only and there's no third-party install API,
+            so builds happen on your machine: fetch the source, build it with the
+            Vega SDK, then run <code>vega device install-app</code>. That works,
+            but it means getting off the couch every time you want to try
+            something.
           </p>
           <p>
-            There's even a <strong>Power tools</strong> panel for poking at the
-            stick: launch hidden system apps the launcher won't show, see and
-            stop running apps, run allowlisted <code>vega device run-cmd</code>
-            commands from a D-pad terminal, read device info, and reboot the TV.
-            It all goes through the same allowlisted, token-authenticated bridge
-            — which binds to localhost unless you pass <code>--lan</code>, and
-            won't accept a single request until you approve that pairing code.
+            <code>fyaisa connect</code> fixes that. It starts a small bridge on
+            your LAN, the TV app pairs with a 6-digit code, and every app's
+            detail page grows an <strong>Install</strong> button. Browse on the
+            TV and install with the remote, without going back to the terminal.
+            The pairing survives reboots, so you only do it once per PC.
           </p>
           <p>
-            And there's already an app lineup: <strong>VegaTube</strong>
-            (ad-free YouTube, the reference app), <strong>ElevSH Files</strong>
-            (a D-pad file browser), <strong>Google Snake</strong>,
-            <strong>DOOM</strong> shareware compiled to WebAssembly, and
-            <strong>Super Mario Bros</strong> via a NES emulator. Adding your
-            own is the point — copy the reference app, tweak the manifest,
-            register it in the catalog, and open a PR.
+            There's also a <strong>Power tools</strong> panel for poking at the
+            stick: launch hidden system apps, see and stop running apps, run
+            allowlisted <code>vega device run-cmd</code> commands from a D-pad
+            terminal, read device info, and reboot. It all goes through the same
+            bridge, which only listens on localhost unless you pass
+            <code>--lan</code> and won't accept a request until you approve the
+            pairing code.
           </p>
           <p>
-            That's FYAISA. It's the new latest project on the front page, so go
-            grab it if you've got a locked-down Fire TV and a bit of stubbornness.
-            It's not affiliated with Amazon or Google — it just uses Amazon's
-            own developer tools. Have fun, and stay off the couch.
+            The catalog already has VegaTube (ad-free YouTube and the reference
+            app), ElevSH Files (a file browser built for a D-pad), Google Snake,
+            DOOM shareware compiled to WebAssembly, and Super Mario Bros through
+            a NES emulator. To add your own, copy the reference app, change the
+            manifest, register it in the catalog, and open a PR.
+          </p>
+          <p>
+            FYAISA isn't affiliated with Amazon or Google. It just uses Amazon's
+            own developer tools, which is the part I find funny. If you've got a
+            locked-down Fire TV and some stubbornness, give it a shot. Have fun,
+            and stay off the couch.
           </p>
         </div>
       </article>
 
       <div class="actions">
-        <a class="btn" href="index.html">← All articles</a>
+        <a class="btn" href="index.html">← all articles</a>
         <a
           class="btn btn--primary"
           href="https://github.com/AaronYTDev/FYAISA"
           target="_blank"
           rel="noopener"
-          >View project ↗</a
+          >view project ↗</a
         >
       </div>
     </main>
 
     <footer class="site-footer">
       <div class="container site-footer__inner">
-        <span
-          >© <span data-year>2026</span> aaronYTDev · Built with plain HTML,
-          CSS &amp; JS.</span
-        >
+        <p>
+          © <span data-year>2026</span> aaronYTDev. Hand-written HTML and CSS.
+          No trackers, no build step.
+        </p>
         <nav class="footer-links" aria-label="Footer">
-          <a href="../index.html">Home</a>
-          <a href="index.html">Articles</a>
+          <a href="../index.html">home</a>
+          <a href="index.html">writing</a>
           <a
             href="https://github.com/AaronYTDev/aaronYTDev-s-Corner"
             target="_blank"
             rel="noopener"
-            >Source ↗</a
+            >source ↗</a
           >
           <a
             class="destroy-page"
@@ -217,7 +207,7 @@
             target="_blank"
             rel="noopener"
             title="Open this page in Sprite Fusion's destroy sandbox"
-            >💥 Destroy this page</a
+            >destroy this page 💥</a
           >
         </nav>
       </div>

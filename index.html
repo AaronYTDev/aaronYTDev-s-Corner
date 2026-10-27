@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>aaronYTDev's Corner</title>
+    <title>aaronYTDev's corner</title>
     <meta
       name="description"
-      content="aaronYTDev's corner of the internet — articles, files, and links to the things I'm building."
+      content="Tools, Linux experiments, and Fire TV homebrew from aaronYTDev."
     />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%236ea8fe'/%3E%3Ctext x='50' y='71' font-family='Arial,sans-serif' font-size='64' font-weight='700' text-anchor='middle' fill='%23081020'%3Ea%3C/text%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23faf8f3'/%3E%3Crect x='4.5' y='4.5' width='55' height='55' fill='none' stroke='%23a8431f' stroke-width='3'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' text-anchor='middle' fill='%231c1916'%3Ea%3C/text%3E%3C/svg%3E"
     />
     <script>
       (function () {
@@ -35,7 +35,7 @@
       <div class="container site-header__inner">
         <a class="brand" href="index.html">
           <span class="brand__mark" aria-hidden="true">a</span>
-          <span>aaronYTDev's Corner</span>
+          <span>aaronYTDev's corner</span>
         </a>
         <button
           class="nav-toggle"
@@ -43,20 +43,18 @@
           aria-expanded="false"
           aria-controls="site-nav"
           aria-label="Toggle navigation"
-        >
-          ☰
-        </button>
+        ></button>
         <nav class="nav" id="site-nav" aria-label="Primary">
-          <a class="nav__link" href="index.html">Home</a>
-          <a class="nav__link" href="articles/index.html">Articles</a>
-          <a class="nav__link" href="TPOAF.html">Files</a>
-          <a class="nav__link" href="example.html">Example</a>
+          <a class="nav__link" href="index.html">home</a>
+          <a class="nav__link" href="articles/index.html">writing</a>
+          <a class="nav__link" href="TPOAF.html">files</a>
+          <a class="nav__link" href="example.html">example</a>
           <a
             class="nav__link nav__link--external"
             href="https://github.com/AaronYTDev"
             target="_blank"
             rel="noopener"
-            >GitHub</a
+            >github</a
           >
           <button class="theme-toggle" type="button" aria-label="Switch theme">
             <svg
@@ -91,117 +89,220 @@
     </header>
 
     <main id="main">
-      <section class="container hero">
-        <span class="eyebrow">Welcome</span>
-        <h1>My corner of the <span class="gradient-text">internet</span></h1>
-        <p class="lede">
-          This is where I put stuff in my corner of the internet — articles,
-          files, and links to the things I'm building.
-        </p>
-        <div class="actions">
-          <a class="btn btn--primary" href="articles/index.html">Read the articles</a>
-          <a
-            class="btn"
-            href="https://github.com/AaronYTDev/FYAISA"
-            target="_blank"
-            rel="noopener"
-            >Latest project ↗</a
-          >
-        </div>
-      </section>
+      <div class="container">
+        <section class="intro">
+          <h1>aaronYTDev</h1>
+          <p class="intro__about">
+            I build small tools for Linux, poke at Fire TV homebrew, and write
+            down what I learn. This is where it all ends up.
+          </p>
+          <p class="intro__meta">
+            <a href="https://github.com/AaronYTDev">github.com/AaronYTDev</a>
+            <span>no newsletter, no analytics</span>
+          </p>
+        </section>
 
-      <section class="container" aria-labelledby="explore-title">
-        <div class="section-title">
-          <h2 id="explore-title">Explore</h2>
-          <span class="muted">Pick a door</span>
-        </div>
-        <div class="grid">
-          <a class="card" href="articles/index.html">
-            <h3 class="card__title">aaronYTDev's Articles</h3>
-            <p class="card__desc">
-              Write-ups about my projects, Linux, and whatever else I'm into.
-            </p>
-            <span class="card__cta">Read articles →</span>
-          </a>
+        <section class="block" aria-labelledby="writing-title">
+          <div class="block__head">
+            <h2 class="block__title" id="writing-title">Writing</h2>
+            <a class="block__note" href="articles/index.html">all 5 posts →</a>
+          </div>
+          <ul class="entries">
+            <li>
+              <a class="entry" href="articles/fyaisa.html">
+                <span class="entry__date">11 Oct 2026</span>
+                <span class="entry__body">
+                  <span class="entry__title"
+                    >FYAISA: getting around Amazon's sideloading block</span
+                  >
+                  <span class="entry__desc"
+                    >Amazon blocked sideloading on newer Fire TV Sticks, so we used their own developer tools to get around it.</span
+                  >
+                </span>
+                <span class="entry__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a class="entry" href="articles/ff.html">
+                <span class="entry__date">21 Aug 2026</span>
+                <span class="entry__body">
+                  <span class="entry__title"
+                    >Editing fastfetch without touching the config</span
+                  >
+                  <span class="entry__desc"
+                    >A TUI for fastfetch settings. It's on v1.6.7 now, and it saves you from editing config files by hand.</span
+                  >
+                </span>
+                <span class="entry__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a class="entry" href="articles/Arch2SteamOS.html">
+                <span class="entry__date">3 Jun 2026</span>
+                <span class="entry__body">
+                  <span class="entry__title">Arch2SteamOS: making Arch act like SteamOS</span>
+                  <span class="entry__desc"
+                    >A script for people who want the SteamOS experience without reinstalling or dealing with community distros.</span
+                  >
+                </span>
+                <span class="entry__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+          </ul>
+          <p class="more"><a href="articles/index.html">Read the rest →</a></p>
+        </section>
 
-          <a class="card" href="TPOAF.html">
-            <h3 class="card__title">The Plaster Of All Files</h3>
-            <p class="card__desc">Every file I share lives here.</p>
-            <span class="card__cta">Browse files →</span>
-          </a>
+        <section class="block" aria-labelledby="projects-title">
+          <div class="block__head">
+            <h2 class="block__title" id="projects-title">Projects</h2>
+            <span class="block__note">things I keep poking at</span>
+          </div>
+          <ul class="entries">
+            <li>
+              <a
+                class="entry entry--plain"
+                href="https://github.com/AaronYTDev/FYAISA"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="entry__body">
+                  <span class="entry__title">FYAISA</span>
+                  <span class="entry__desc"
+                    >A homebrew catalog for Vega OS devices, with an on-device
+                    app and a CLI.</span
+                  >
+                </span>
+                <span class="entry__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="entry entry--plain"
+                href="https://github.com/AaronYTDev/fastfetch-config"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="entry__body">
+                  <span class="entry__title">fastfetch-config</span>
+                  <span class="entry__desc"
+                    >A TUI for fastfetch settings, so you don't have to edit the
+                    config by hand.</span
+                  >
+                </span>
+                <span class="entry__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="entry entry--plain"
+                href="https://github.com/AaronYTDev/NOS"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="entry__body">
+                  <span class="entry__title">NOS</span>
+                  <span class="entry__desc"
+                    >An apt-style package manager for Nix, for people who find
+                    Nix confusing.</span
+                  >
+                </span>
+                <span class="entry__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="entry entry--plain"
+                href="https://github.com/AaronYTDev/Arch2SteamOS"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="entry__body">
+                  <span class="entry__title">Arch2SteamOS</span>
+                  <span class="entry__desc"
+                    >A script that makes an Arch install feel a lot more like
+                    SteamOS.</span
+                  >
+                </span>
+                <span class="entry__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+          </ul>
+        </section>
 
-          <a
-            class="card"
-            href="https://github.com/AaronYTDev/FYAISA"
-            target="_blank"
-            rel="noopener"
-          >
-            <h3 class="card__title">FYAISA</h3>
-            <p class="card__desc">
-              My latest project — the one-stop homebrew shop for Vega OS
-              (Fire TV) devices.
-            </p>
-            <span class="card__cta">View on GitHub ↗</span>
-          </a>
-
-          <a
-            class="card"
-            href="https://github.com/AaronYTDev/fastfetch-config"
-            target="_blank"
-            rel="noopener"
-          >
-            <h3 class="card__title">fastfetch-config</h3>
-            <p class="card__desc">
-              A TUI to manage your fastfetch configuration without touching the
-              config files.
-            </p>
-            <span class="card__cta">View on GitHub ↗</span>
-          </a>
-
-          <a class="card" href="example.html">
-            <h3 class="card__title">Example page</h3>
-            <p class="card__desc">A very small, very honest example page.</p>
-            <span class="card__cta">Take a look →</span>
-          </a>
-
-          <a class="card" href="unityhub://2021.3.16f1">
-            <h3 class="card__title">MarrowSDK Unity</h3>
-            <p class="card__desc">
-              Download the MarrowSDK-compatible Unity version (opens Unity Hub).
-            </p>
-            <span class="card__cta">Open in Unity Hub →</span>
-          </a>
-
-          <a
-            class="card"
-            href="https://github.com/AaronYTDev/aaronYTDev-s-Corner"
-            target="_blank"
-            rel="noopener"
-          >
-            <h3 class="card__title">Website source</h3>
-            <p class="card__desc">
-              The code behind this site — plain HTML, CSS and JavaScript.
-            </p>
-            <span class="card__cta">View source ↗</span>
-          </a>
-        </div>
-      </section>
+        <section class="block" aria-labelledby="elsewhere-title">
+          <div class="block__head">
+            <h2 class="block__title" id="elsewhere-title">Elsewhere</h2>
+          </div>
+          <ul class="entries">
+            <li>
+              <a class="entry entry--plain" href="TPOAF.html">
+                <span class="entry__body">
+                  <span class="entry__title">The Plaster Of All Files</span>
+                  <span class="entry__desc"
+                    >Every file I share, in one place.</span
+                  >
+                </span>
+                <span class="entry__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a class="entry entry--plain" href="example.html">
+                <span class="entry__body">
+                  <span class="entry__title">Example page</span>
+                  <span class="entry__desc"
+                    >A very small, very honest example page.</span
+                  >
+                </span>
+                <span class="entry__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a class="entry entry--plain" href="unityhub://2021.3.16f1">
+                <span class="entry__body">
+                  <span class="entry__title">MarrowSDK Unity</span>
+                  <span class="entry__desc"
+                    >Open Unity 2021.3.16f1 in Unity Hub for the
+                    MarrowSDK-compatible editor.</span
+                  >
+                </span>
+                <span class="entry__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="entry entry--plain"
+                href="https://github.com/AaronYTDev/aaronYTDev-s-Corner"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="entry__body">
+                  <span class="entry__title">Website source</span>
+                  <span class="entry__desc"
+                    >The code behind this site. Plain HTML and CSS.</span
+                  >
+                </span>
+                <span class="entry__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
 
     <footer class="site-footer">
       <div class="container site-footer__inner">
-        <span
-          >© <span data-year>2026</span> aaronYTDev · Built with plain HTML,
-          CSS &amp; JS.</span
-        >
+        <p>
+          © <span data-year>2026</span> aaronYTDev. Hand-written HTML and CSS.
+          No trackers, no build step.
+        </p>
         <nav class="footer-links" aria-label="Footer">
-          <a href="articles/index.html">Articles</a>
-          <a href="TPOAF.html">Files</a>
+          <a href="index.html">home</a>
+          <a href="articles/index.html">writing</a>
           <a
             href="https://github.com/AaronYTDev/aaronYTDev-s-Corner"
             target="_blank"
             rel="noopener"
-            >Source ↗</a
+            >source ↗</a
           >
           <a
             class="destroy-page"
@@ -209,7 +310,7 @@
             target="_blank"
             rel="noopener"
             title="Open this page in Sprite Fusion's destroy sandbox"
-            >💥 Destroy this page</a
+            >destroy this page 💥</a
           >
         </nav>
       </div>

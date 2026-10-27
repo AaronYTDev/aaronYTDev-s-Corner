@@ -146,7 +146,7 @@
   var counter = document.querySelector("[data-article-count]");
   if (counter) {
     var scope = counter.closest("main") || document;
-    counter.textContent = String(scope.querySelectorAll(".card").length);
+    counter.textContent = String(scope.querySelectorAll(".entries .entry").length);
   }
 
   /* --- "Destroy this page" buttons --------------------------------------- */

@@ -19,21 +19,21 @@ articles/             The articles section
   template.html         Template for new articles
   *.html                Individual articles
 assets/
-  css/style.css       The shared theme (dark-first, with a light mode)
+  css/style.css       The shared theme (paper by default, warm dark mode)
   js/main.js          Theme toggle, mobile nav, active links, reading progress
 ```
 
 ## Theme
 
-The site ships a modern dark theme with a light mode toggle. The choice is saved
-to `localStorage` and, until a visitor picks a theme, it follows their operating
-system's `prefers-color-scheme`.
+The site is paper-coloured by default, with a warm dark mode behind the toggle
+in the header. The choice is saved to `localStorage` and, until a visitor picks
+a theme, it follows their operating system's `prefers-color-scheme`.
 
 ## Adding an article
 
 1. Copy `articles/template.html` to a new file in `articles/`.
-2. Replace the `(placeholders)` — title, date, writer/editor and body.
-3. Add a card linking to it in `articles/index.html`.
+2. Replace the `(placeholders)` — title, date, writer and body.
+3. Add an entry linking to it in `articles/index.html`.
 
 ## License
 

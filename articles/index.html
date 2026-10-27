@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Articles · aaronYTDev's Corner</title>
+    <title>Writing · aaronYTDev's corner</title>
     <meta
       name="description"
-      content="aaronYTDev's Articles — write-ups about projects, Linux, and more."
+      content="Posts about my projects, Linux, and whatever else I'm into. Newest first."
     />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%236ea8fe'/%3E%3Ctext x='50' y='71' font-family='Arial,sans-serif' font-size='64' font-weight='700' text-anchor='middle' fill='%23081020'%3Ea%3C/text%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23faf8f3'/%3E%3Crect x='4.5' y='4.5' width='55' height='55' fill='none' stroke='%23a8431f' stroke-width='3'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' text-anchor='middle' fill='%231c1916'%3Ea%3C/text%3E%3C/svg%3E"
     />
     <script>
       (function () {
@@ -35,7 +35,7 @@
       <div class="container site-header__inner">
         <a class="brand" href="../index.html">
           <span class="brand__mark" aria-hidden="true">a</span>
-          <span>aaronYTDev's Corner</span>
+          <span>aaronYTDev's corner</span>
         </a>
         <button
           class="nav-toggle"
@@ -43,20 +43,18 @@
           aria-expanded="false"
           aria-controls="site-nav"
           aria-label="Toggle navigation"
-        >
-          ☰
-        </button>
+        ></button>
         <nav class="nav" id="site-nav" aria-label="Primary">
-          <a class="nav__link" href="../index.html">Home</a>
-          <a class="nav__link" href="index.html">Articles</a>
-          <a class="nav__link" href="../TPOAF.html">Files</a>
-          <a class="nav__link" href="../example.html">Example</a>
+          <a class="nav__link" href="../index.html">home</a>
+          <a class="nav__link" href="index.html">writing</a>
+          <a class="nav__link" href="../TPOAF.html">files</a>
+          <a class="nav__link" href="../example.html">example</a>
           <a
             class="nav__link nav__link--external"
             href="https://github.com/AaronYTDev"
             target="_blank"
             rel="noopener"
-            >GitHub</a
+            >github</a
           >
           <button class="theme-toggle" type="button" aria-label="Switch theme">
             <svg
@@ -91,88 +89,104 @@
     </header>
 
     <main id="main" class="container">
-      <section class="hero">
-        <span class="eyebrow">aaronYTDev's Articles</span>
-        <h1>Words from the <span class="gradient-text">corner</span></h1>
-        <p class="lede">
-          Write-ups about my projects, Linux, and whatever else I'm into.
+      <section class="intro">
+        <h1>Writing</h1>
+        <p class="intro__about">
+          Posts about my projects, Linux, and whatever else I'm into. Newest
+          first.
         </p>
       </section>
 
-      <section aria-labelledby="latest-title">
-        <div class="section-title">
-          <h2 id="latest-title">All articles</h2>
-          <span class="muted"
-            ><span data-article-count>5</span> posts</span
+      <section class="block" aria-labelledby="all-title">
+        <div class="block__head">
+          <h2 class="block__title" id="all-title">All posts</h2>
+          <span class="block__note"
+            ><span data-article-count>5</span> total</span
           >
         </div>
-        <div class="grid">
-          <a class="card" href="fyaisa.html">
-            <span class="eyebrow">Latest · Oct 11, 2026</span>
-            <h3 class="card__title">
-              FYAISA — the one-stop homebrew shop for Vega OS (Fire TV) devices
-            </h3>
-            <p class="card__desc">
-              Amazon locked down sideloading on new Fire TV Sticks. So we built
-              a homebrew shop out of their own SDK.
-            </p>
-            <span class="card__cta">Read article →</span>
-          </a>
-
-          <a class="card" href="ff.html">
-            <span class="eyebrow">Aug 21, 2026</span>
-            <h3 class="card__title">
-              fastfetch-config — The better way to edit your fastfetch config
-            </h3>
-            <p class="card__desc">
-              A year-in-the-making tool, now on V1.6.7, that edits your
-              fastfetch config without touching the files.
-            </p>
-            <span class="card__cta">Read article →</span>
-          </a>
-
-          <a class="card" href="Arch2SteamOS.html">
-            <span class="eyebrow">Jun 3, 2026</span>
-            <h3 class="card__title">Introducing: Arch2SteamOS</h3>
-            <p class="card__desc">
-              Turn your Arch install into an authentic SteamOS experience.
-            </p>
-            <span class="card__cta">Read article →</span>
-          </a>
-
-          <a class="card" href="urlchange.html">
-            <span class="eyebrow">May 7, 2026</span>
-            <h3 class="card__title">We've moved URLs!</h3>
-            <p class="card__desc">Short and sweet — the site found a new home.</p>
-            <span class="card__cta">Read article →</span>
-          </a>
-
-          <a class="card" href="articlesishere.html">
-            <span class="eyebrow">First post · May 6, 2026</span>
-            <h3 class="card__title">aaronYTDev's Articles is here!</h3>
-            <p class="card__desc">
-              The launch of the articles corner, two years in the making.
-            </p>
-            <span class="card__cta">Read article →</span>
-          </a>
-        </div>
+        <ul class="entries">
+          <li>
+            <a class="entry" href="fyaisa.html">
+              <span class="entry__date">11 Oct 2026</span>
+              <span class="entry__body">
+                <span class="entry__title"
+                  >FYAISA: getting around Amazon's sideloading block</span
+                >
+                <span class="entry__desc"
+                  >Amazon blocked sideloading on newer Fire TV Sticks, so we used their own developer tools to get around it.</span
+                >
+              </span>
+              <span class="entry__arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a class="entry" href="ff.html">
+              <span class="entry__date">21 Aug 2026</span>
+              <span class="entry__body">
+                <span class="entry__title"
+                  >Editing fastfetch without touching the config</span
+                >
+                <span class="entry__desc"
+                  >A TUI for fastfetch settings. It's on v1.6.7 now, and it saves you from editing config files by hand.</span
+                >
+              </span>
+              <span class="entry__arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a class="entry" href="Arch2SteamOS.html">
+              <span class="entry__date">3 Jun 2026</span>
+              <span class="entry__body">
+                <span class="entry__title">Arch2SteamOS: making Arch act like SteamOS</span>
+                <span class="entry__desc"
+                  >A script for people who want the SteamOS experience without reinstalling or dealing with community distros.</span
+                >
+              </span>
+              <span class="entry__arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a class="entry" href="urlchange.html">
+              <span class="entry__date">7 May 2026</span>
+              <span class="entry__body">
+                <span class="entry__title">The site moved</span>
+                <span class="entry__desc"
+                  >New address, same stuff. That's the whole post.</span
+                >
+              </span>
+              <span class="entry__arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a class="entry" href="articlesishere.html">
+              <span class="entry__date">6 May 2026</span>
+              <span class="entry__body">
+                <span class="entry__title">I finally started writing here</span>
+                <span class="entry__desc"
+                  >Two years of thinking about it, and then I finally made the page. This is post one.</span
+                >
+              </span>
+              <span class="entry__arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container site-footer__inner">
-        <span
-          >© <span data-year>2026</span> aaronYTDev · Built with plain HTML,
-          CSS &amp; JS.</span
-        >
+        <p>
+          © <span data-year>2026</span> aaronYTDev. Hand-written HTML and CSS.
+          No trackers, no build step.
+        </p>
         <nav class="footer-links" aria-label="Footer">
-          <a href="../index.html">Home</a>
-          <a href="index.html">Articles</a>
+          <a href="../index.html">home</a>
+          <a href="index.html">writing</a>
           <a
             href="https://github.com/AaronYTDev/aaronYTDev-s-Corner"
             target="_blank"
             rel="noopener"
-            >Source ↗</a
+            >source ↗</a
           >
           <a
             class="destroy-page"
@@ -180,7 +194,7 @@
             target="_blank"
             rel="noopener"
             title="Open this page in Sprite Fusion's destroy sandbox"
-            >💥 Destroy this page</a
+            >destroy this page 💥</a
           >
         </nav>
       </div>
