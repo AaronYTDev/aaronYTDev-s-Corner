@@ -1,19 +1,12 @@
-/* ==========================================================================
-   aaronYTDev's Corner — site script
-   No dependencies. Loaded with `defer` on every page.
-   - Theme toggle (persisted, respects system preference)
-   - Mobile navigation
-   - Active nav link highlighting
-   - Article reading progress
-   - Current year in the footer
-   ========================================================================== */
+/* Site script. Loaded with defer on every page, no dependencies. */
+
 (function () {
   "use strict";
 
   var root = document.documentElement;
   var STORAGE_KEY = "theme";
 
-  /* --- Theme ------------------------------------------------------------- */
+  /* Theme */
   function preferredTheme() {
     var stored = null;
     try {
@@ -77,7 +70,7 @@
     else if (media.addListener) media.addListener(onSystemChange);
   }
 
-  /* --- Mobile navigation ------------------------------------------------- */
+  /* Mobile navigation */
   var navToggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("site-nav");
   if (navToggle && nav) {
@@ -95,7 +88,7 @@
     });
   }
 
-  /* --- Active nav link --------------------------------------------------- */
+  /* Active nav link */
   function normalize(path) {
     path = path.replace(/\/index\.html$/, "/");
     if (path.length > 1) path = path.replace(/\/$/, "");
@@ -123,7 +116,7 @@
     }
   }
 
-  /* --- Reading progress -------------------------------------------------- */
+  /* Reading progress */
   var progress = document.querySelector(".reading-progress");
   if (progress) {
     var updateProgress = function () {
@@ -137,19 +130,19 @@
     window.addEventListener("resize", updateProgress);
   }
 
-  /* --- Footer year ------------------------------------------------------- */
+  /* Footer year */
   var year = String(new Date().getFullYear());
   var slots = document.querySelectorAll("[data-year]");
   for (var j = 0; j < slots.length; j++) slots[j].textContent = year;
 
-  /* --- Article count ----------------------------------------------------- */
+  /* Article count */
   var counter = document.querySelector("[data-article-count]");
   if (counter) {
     var scope = counter.closest("main") || document;
     counter.textContent = String(scope.querySelectorAll(".entries .entry").length);
   }
 
-  /* --- "Destroy this page" buttons --------------------------------------- */
+  /* Destroy this page buttons */
   // Point every destroy button at Sprite Fusion's sandbox with this exact
   // page's URL, so it works no matter what domain the site is served from.
   var destroyLinks = document.querySelectorAll(".destroy-page");

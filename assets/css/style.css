@@ -490,6 +490,19 @@ a.block__note:hover {
   line-height: 1.75;
 }
 
+.prose h2 {
+  margin-top: 2.1rem;
+  font-size: 1.28rem;
+}
+
+.prose h3 {
+  margin-top: 1.6rem;
+}
+
+.prose pre {
+  margin: 1.4rem 0;
+}
+
 .prose > :last-child {
   margin-bottom: 0;
 }

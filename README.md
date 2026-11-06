@@ -1,39 +1,42 @@
 # aaronYTDev's Corner
 
-Welcome to my corner of the internet. Find it here:
-https://aaronytdevs-corner.netlify.app/
+Source for my site: https://aaronytdevs-corner.netlify.app/
 
-A small, build-free static site — just HTML, CSS and vanilla JavaScript, served
-straight from this repo by Netlify (no build step required).
+Plain HTML, CSS, and vanilla JavaScript. No build step, no npm, no bundler.
+Netlify serves the files in this repo as they are.
 
 ## Structure
 
 ```
 index.html            Home page
-TPOAF.html            "The Plaster Of All Files" — shared files
+TPOAF.html            "The Plaster Of All Files", shared files
 example.html          Example page
-fileremoved.html      "File removed" error page
-404.html              Not-found page (used automatically by Netlify)
-articles/             The articles section
-  index.html            Article index
-  template.html         Template for new articles
-  *.html                Individual articles
+fileremoved.html      File removed page
+404.html              Not found page, used automatically by Netlify
+articles/             The writing section
+  index.html            Post index
+  template.html         Template for new posts
+  *.html                Individual posts
 assets/
-  css/style.css       The shared theme (paper by default, warm dark mode)
+  css/style.css       Shared theme, paper by default with a dark mode
   js/main.js          Theme toggle, mobile nav, active links, reading progress
 ```
 
 ## Theme
 
-The site is paper-coloured by default, with a warm dark mode behind the toggle
-in the header. The choice is saved to `localStorage` and, until a visitor picks
-a theme, it follows their operating system's `prefers-color-scheme`.
+Paper coloured by default, warm dark mode behind the toggle in the header. The
+choice goes into `localStorage`. If a visitor has never picked one, the page
+follows their `prefers-color-scheme` instead.
 
-## Adding an article
+## Adding a post
 
 1. Copy `articles/template.html` to a new file in `articles/`.
-2. Replace the `(placeholders)` — title, date, writer and body.
-3. Add an entry linking to it in `articles/index.html`.
+2. Fill in the title, date, writer, and body.
+3. Link it from `articles/index.html`, and from the Writing block on
+   `index.html` if it belongs in the top three.
+
+The post count on the writing index is counted from the page at load time, so
+only the static fallback number in the HTML needs a bump.
 
 ## License
 
